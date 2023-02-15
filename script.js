@@ -8,8 +8,15 @@ console.log("veikia")
 
 const clickBtn = document.getElementById('btn__element');
 
-console.log(clickBtn)
+let count = 0
 
-clickBtn.addEventListener('click', (() => {
-    console.log("u clicked")
-}))
+function countClicks() {
+
+    count++;
+
+    let countClick = document.getElementById('btn__state');
+
+    countClick.innerHTML = count;
+}
+
+clickBtn.addEventListener('click', countClicks)
